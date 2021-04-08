@@ -1,0 +1,29 @@
+server:
+  port: 8083
+  
+spring:
+  application:
+    name: disciplina-ms
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
+disciplina:
+  rabbitmq:
+    exchange: disciplina.exchange
+    routingkey: disciplina.avaliacao.routingkey
+
+
+# Database configuration
+
